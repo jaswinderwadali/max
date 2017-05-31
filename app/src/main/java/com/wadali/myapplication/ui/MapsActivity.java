@@ -59,7 +59,7 @@ public class MapsActivity extends BaseActivity {
     private Polyline line;
     private TextView routeLable;
     private LatLng dropLatLng, pickUpLatLng;
-    private Marker picUpMark, dropMark;
+    private Marker picUpMark = null, dropMark = null;
 
 
     @Override
@@ -183,11 +183,10 @@ public class MapsActivity extends BaseActivity {
     private void drawPath(MapPathModel mapPathModel) {
         if (mMap != null) {
             mMap.clear();
-            picUpMark.remove();
-            dropMark.remove();
             routeContainerLayout.removeAllViews();
         }
-
+        if (picUpMark != null) picUpMark.remove();
+        if (dropMark != null) dropMark.remove();
         picUpMark = mMap.addMarker(new MarkerOptions().position(pickUpLatLng).icon(
                 BitmapDescriptorFactory.fromResource(R.drawable.dot)));
         dropMark = mMap.addMarker(new MarkerOptions().position(dropLatLng).icon(

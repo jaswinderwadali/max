@@ -185,6 +185,7 @@ public class MapsActivity extends BaseActivity {
             mMap.clear();
             picUpMark.remove();
             dropMark.remove();
+            routeContainerLayout.removeAllViews();
         }
 
         picUpMark = mMap.addMarker(new MarkerOptions().position(pickUpLatLng).icon(

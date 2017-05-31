@@ -1,0 +1,16 @@
+<resources>
+    <string name="pick_up_location">Pick up location</string>
+    <string name="drop_location">Drop location</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Please retry…</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="all_routes">All Routes</string>
+    <string name="permission">Permissions</string>
+    <string name="ask_permissions">Please give location permissions</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_availble">Sorry no path available!</string>
+    <string name="gps_off">GPS is not enable!</string>
+    <string name="open_location_settings">check settings and enable location</string>
+    <string name="settings">Settings</string>
+</resources>

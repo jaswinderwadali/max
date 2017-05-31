@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.wadali.myapplication"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        buildConfigField 'String', 'BASE_URL_MAP', '"http://maps.googleapis.com"'
+        multiDexEnabled true
+
+        jackOptions {
+            enabled true
+
+        }
+
+    }
+
+    productFlavors {
+        prod {
+            applicationId "com.wadali.myapplication"
+            resValue "string", "app_name", "Rapido Test"
+
+        }
+        dev {
+            applicationId "com.wadali.myapplication.dev"
+            resValue "string", "app_name", "Rapido Test Dev"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+        incremental false
+
+    }
+}
+
+dependencies {
+    compile 'com.android.support:multidex:1.0.0'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
+    compile 'com.google.android.gms:play-services:10.2.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+}

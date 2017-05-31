@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_width">200dp</dimen>
+    <dimen name="ten_padding">10dp</dimen>
+    <dimen name="evevation">4dp</dimen>
+</resources>
